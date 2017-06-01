@@ -47,9 +47,6 @@
 }
 
 @media screen and (max-width:640px) {
-    .use-btn {
-        display: none;
-    }
     footer li {
         display: block;
         text-align: left;
@@ -69,6 +66,11 @@
         min-width: 120px;
         font-size: 12px;
     }
+    footer img {
+        width: 40%;
+        margin-top: 2%;
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width:465px) {
@@ -79,19 +81,19 @@
     #why h2 {
         margin-top: 4%;
         margin-bottom: -2%;
-        padding-left: 25%;
-        font-family: cursive, sans-serif;
+        padding-left: 35%;
+        font-family: sans-serif;
     }
     #ser h2 {
         margin-top: 4%;
         margin-bottom: -2%;
         padding-left: 37%;
-        font-family: cursive, sans-serif;
+        font-family: sans-serif;
     }
     #News h2 {
         padding-left: 33%;
         /* background-color: red; */
-        font-family: cursive, sans-serif;
+        font-family: sans-serif;
     }
     .screenshots ul li {
         width: 80%;
@@ -123,19 +125,116 @@
     .features-slider {
         padding: 11% 50px 10% 50px;
     }
-    #featuresSlider p img
-    {
-            width: 50%;
-    height: 20%;
-    float: left;
-    margin-top: -3%;
-    margin-left: -27%;
+    #featuresSlider p img {
+        width: 50%;
+        height: 20%;
+        float: left;
+        margin-top: -3%;
+        margin-left: -27%;
     }
-    #reg a
-    {
-    /*float: left;
-    margin-left: 28%;
-    margin-top: -22%;*/
-    visibility: hidden;
+    #reg a {
+        /* visibility: hidden; */
+        font-size: 12px;
+        padding: 2px;
+        margin-right: 18%;
     }
+    .nav-toggle {
+        position: absolute;
+        top: 0px;
+        right: 14px;
+        z-index: 999999;
+        padding: 10px 35px 16px 0px;
+        cursor: pointer;
+    }
+    .navicon p {
+        visibility: hidden;
+    }
+    .screenshots figure img {
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out;
+        padding: 1%;
+        margin-top: 2%;
+        padding-right: 9%;
+        margin-bottom: 2%;
+    }
+    .screenshots .services_li {
+        margin-left: 10%;
+    }
+    footer img {
+        width: 40%;
+        margin-top: 2%;
+        margin-left: 0;
+    }
+    #mySidenav {
+        width: 165px;
+    }
+    .navicon {
+        position: absolute;
+        height: 26px;
+        float: right;
+        margin-left: 46%;
+        margin-top: 5%;
+    }
+
+    .use-btn {
+    display: inline-block;
+    margin: 0px 10px 10px 5%;
+    padding: 5%;
+    border-radius: 3px;
+    background-color: #333;
+    color: #4b98a9;
+    font-size: 16px;
+    font-weight: bold;
 }
+.learn-btn {
+    display: inline-block;
+    padding: 5%;
+    border: 2px solid #333;
+    border-radius: 3px;
+    color: #333;
+    font-size: 16px;
+    margin-left: 1%;
+    font-weight: bold;
+}
+.hero img {
+    opacity: 1;
+    width: 400%;
+    margin-left: -40%;
+    margin-top: 1%;
+}
+}
+
+@media screen and (max-width:450px) {
+.hero img {
+    opacity: 1;
+    width: 450%;
+    margin-left: -40%;
+    margin-top: 1%;
+}
+
+ .use-btn {
+    display: inline-block;
+    margin: 0px 10px 10px 5%;
+    padding: 5%;
+    border-radius: 3px;
+    background-color: #333;
+    color: #4b98a9;
+    font-size: 16px;
+    font-weight: bold;
+}
+.learn-btn {
+    display: inline-block;
+    padding: 5%;
+    border: 2px solid #333;
+    border-radius: 3px;
+    color: #333;
+    font-size: 16px;
+    margin-left: 1%;
+    font-weight: bold;
+}
+
+}
+
+

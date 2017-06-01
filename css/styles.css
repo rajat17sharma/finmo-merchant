@@ -12,7 +12,9 @@ section,
 summary {
     display: block
 }
-
+body{
+    background-color: beige;
+}
 
 audio,
 canvas,
@@ -111,27 +113,24 @@ h5 {
     }*/
 
 #reg a{
-    float: left;
+    float: right;
+    font-size: 16px;
+    padding: 1%;
+    /*margin-top: 8%;*/
 }
 
 #why h2 {
     margin-top: 4%;
     margin-bottom: -2%;
-    padding-left: 40%;
-    font-family: cursive, sans-serif;
+    padding-left: 44%;
+    font-family:  sans-serif;
+    font-weight: bolder;
 }
 
 #News h2 {
     padding-left: 45%;
     /*    background-color: red;*/
-    font-family: cursive, sans-serif;
-}
-
-#ser h2 {
-    margin-top: 4%;
-    margin-bottom: -2%;
-    padding-left: 45%;
-    font-family: cursive, sans-serif;
+    font-family: sans-serif;
 }
 
 h6 {
@@ -209,7 +208,7 @@ sub,
 sup {
     position: relative;
     vertical-align: baseline;
-    font-size: 75%;
+    font-size: 50%;
     line-height: 0;
 }
 
@@ -253,7 +252,8 @@ nav ol {
 img {
     border: 0;
     margin-top: -5%;
-    width: 42%;
+    width: 25%;
+    margin-left: 6%;
 }
 
 
@@ -411,10 +411,20 @@ a {
     margin: 0 !important;
     padding: 0 !important;
 }
+#main{
+    padding: 1%;
+}
+
+#main img
+{
+    width: 14%;
+    margin: 2%;
+}
 
 p {
     font-size: 14px;
     line-height: 25px;
+    text-align: center;
 }
 
 a {
@@ -444,26 +454,32 @@ a:focus {
     margin: 0px 10px 10px 5%;
     padding: 20px 50px;
     border-radius: 3px;
-    background-color: #fff;
-    color: #4b98a9;
+    font-weight: bolder;
+    background-color: #33b1ec;
+    color: #ffffff;
     font-size: 16px;
 }
 
 .use-btn:hover,
 .use-btn:focus {
     background-color: #73d0da;
-    color: #fff;
+    color: #333;
     text-decoration: none;
 }
+/*.use-btn:visited
+{
+        background-color: #333;
+}*/
 
 .learn-btn,
 .download-btn {
     display: inline-block;
-    padding: 18px 46px;
-    border: 2px solid #fff;
+    padding: 18px 2%;
+    border: 2px solid #333;
     border-radius: 3px;
-    color: #fff;
+    color: #333;
     font-size: 16px;
+    margin-left: 1%;
 }
 
 .learn-btn:hover,
@@ -498,8 +514,8 @@ a:focus {
 
 .nav-toggle {
     position: absolute;
-    top: 0;
-    right: 15px;
+    top: 6px;
+    right: -31px;
     z-index: 999999;
     padding: 10px 35px 16px 0px;
     cursor: pointer;
@@ -518,7 +534,7 @@ a:focus {
     width: 35px;
     height: 5px;
     border-radius: 1px;
-    background: #fff;
+    background: #333;
     cursor: pointer;
 }
 
@@ -560,9 +576,11 @@ a:focus {
 }
 
 .navicon {
-    position: relative;
+    position: absolute;
     height: 26px;
-}
+    float: right;
+    margin-left: 25%;
+ }
 
 .navicon p {
     margin: 1px 50px 0 0
@@ -579,20 +597,22 @@ a:focus {
     position: relative;
     padding: 60px 0 60px 0;
     min-height: 800px;
-    background: #006bda url('../pics/hero-01.jpg') no-repeat center center;
+    background: #f9f9f9 no-repeat center center;
     background-size: cover;
-    color: #fff;
+    color: #333;
 }
 
 .hero img {
     opacity: 1;
-    width: 50%;
+    width: 25%;
+    margin-left: -40%;
+    margin-top: 1%;
 }
 
 .hero h1 {
     margin: 200px 0 45px 0;
     padding-left: 5%;
-    font-weight: 300;
+    font-weight: 700;
     font-size: 45px;
     color: black;
 }
@@ -651,6 +671,11 @@ section.video a:focus i {
     color: #73d0da
 }
 
+.container
+{
+    width: 80%;
+}
+
 
 .flickity-page-dots .dot {
     width: 13px;
@@ -686,7 +711,7 @@ section.video a:focus i {
     position: relative;
     padding: 11% 100px 10% 100px;
     /*height: 400px;*/
-    background-color: #006bda;
+    background-color: #61baff;
 }
 
 .features-slider ul {
@@ -703,13 +728,13 @@ section.video a:focus i {
 
 .features-slider li h1 {
     margin-bottom: 15px;
-    color: #fff;
+    color: #333;
     font-weight: 400;
     font-size: 22px;
 }
 
 .features-slider li p {
-    color: #fff;
+    color: #333;
     font-size: 24px;
     margin-left: 8%;
     margin-top: 4%;
@@ -803,7 +828,16 @@ blockquote .logo-quote {
     margin: 0 0 0 90px;
 }
 
+#services{
+    background-color: #f5f5f5;
+}
+#services ul li{
+    background-color: #f5f5f5;
+}
 
+.screenshots{
+    background-color: #61baff;
+}
 
 
 .screenshots-intro {
@@ -835,7 +869,7 @@ blockquote .logo-quote {
     float: left;
     min-height: 100%;
     width: 20%;
-    background-color: #f5f5f5;
+    background-color: #61baff;
     list-style: none;
     margin-bottom: 2%;
     margin-left: 10%
@@ -847,7 +881,7 @@ blockquote .logo-quote {
 }
 
 .screenshots figure img {
-    width: 100%;
+    width: 89%;
     height: 100%;
     -webkit-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
@@ -880,7 +914,13 @@ blockquote .logo-quote {
 }
 
 .screenshots figcaption a {
-    color: #fff
+    color: #333
+}
+
+.screenshot_Para
+{
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .screenshots figcaption a:hover,
@@ -932,51 +972,78 @@ blockquote .logo-quote {
     transform: translate(0px, 0px);
 }
 
+.screenshots .services_li
+{
+    margin-left: 20%;
+}
+
 
 
 .download {
     padding: 120px 0;
-    background-color: #006bda;
+    background-color: #61baff;
 }
 
 .download h1 {
     margin: 0 0 15px 0;
-    color: #fff;
+    color: #333;
     font-weight: 400;
     font-size: 40px;
+}
+
+#reg_down{
+    text-align: center;
+    background-color: #f5f5f5;
 }
 
 
 footer {
     padding: 100px 0
+    margin-top: 4%;
+    
 }
 
 footer p {
     color: #c7cacc;
     font-size: 12px;
+    font-weight:bolder;
+
 }
 
 footer ul {
-    margin-top: 30px
+    margin-top: 30px;
+    font-weight:bolder: 
+
 }
 
 footer li {
     float: left;
-    margin-right: 15%;
+    margin-right: 12%;
     list-style: none;
     text-transform: uppercase;
     font-weight: 400;
+    
 }
 
 footer li a {
     color: #3f6184;
     text-align: center;
     margin: auto;
+    text-transform: lowercase;
+    font-weight:bolder: 
 }
 
 footer li:last-child {
     margin-right: 0
 }
+
+footer img
+{
+    width: 12%;
+    margin-top: 2%;
+    margin-left: 0;
+}
+
 
 
 
@@ -987,6 +1054,7 @@ footer li:last-child {
     width: 100%;
     height: 100%;
     background: rgba(52, 82, 113, 0.95);
+    /*background:#61baff; */
 }
 
 
@@ -995,7 +1063,7 @@ footer li:last-child {
     top: 50%;
     height: 60%;
     text-align: center;
-    font-size: 54px;
+    font-size: 74px;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -1029,12 +1097,12 @@ footer li:last-child {
     display: block;
     padding: 50px 0;
     min-width: 190px;
-    border: 2px solid #fff;
+    border: 2px solid #333;
     border-radius: 3px;
-    background-color: #345271;
-    color: #fff;
+    background-color: #257ad2;
+    color: #333;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 15px;
     -webkit-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
