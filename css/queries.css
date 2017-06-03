@@ -67,10 +67,10 @@
         font-size: 12px;
     }
     footer img {
-    width: 40%;
-    margin-top: 2%;
-    margin-left: 0;
-}
+        width: 40%;
+        margin-top: 2%;
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width:465px) {
@@ -82,18 +82,18 @@
         margin-top: 4%;
         margin-bottom: -2%;
         padding-left: 35%;
-        font-family:  sans-serif;
+        font-family: sans-serif;
     }
     #ser h2 {
         margin-top: 4%;
         margin-bottom: -2%;
         padding-left: 37%;
-        font-family:  sans-serif;
+        font-family: sans-serif;
     }
     #News h2 {
         padding-left: 33%;
         /* background-color: red; */
-        font-family:  sans-serif;
+        font-family: sans-serif;
     }
     .screenshots ul li {
         width: 80%;
@@ -132,21 +132,21 @@
         margin-top: -3%;
         margin-left: -27%;
     }
-  #reg a {
-    /* visibility: hidden; */
-    font-size: 12px;
-    padding: 2px;
-    margin-right: 18%;
-}
-
+    #reg a {
+        /* visibility: hidden; */
+        font-size: 10px;
+        padding: 4%;
+        margin-right: 18%;
+        margin-top: -5%;
+    }
     .nav-toggle {
-    position: absolute;
-    top: 0px;
-    right: 14px;
-    z-index: 999999;
-    padding: 10px 35px 16px 0px;
-    cursor: pointer;
-}
+        position: absolute;
+        top: 0px;
+        right: 14px;
+        z-index: 999999;
+        padding: 10px 35px 16px 0px;
+        cursor: pointer;
+    }
     .navicon p {
         visibility: hidden;
     }
@@ -161,26 +161,82 @@
         margin-bottom: 2%;
     }
     .screenshots .services_li {
-    margin-left: 10%;
+        margin-left: 10%;
+    }
+    footer img {
+        width: 40%;
+        margin-top: 2%;
+        margin-left: 0;
+    }
+    /*#mySidenav {
+        width: 165px;
+    }*/
+    .navicon {
+        position: absolute;
+        height: 26px;
+        float: right;
+        margin-left: 46%;
+        margin-top: 5%;
+    }
+    .use-btn {
+        display: inline-block;
+        margin: 0px 10px 10px 5%;
+        padding: 5%;
+        border-radius: 3px;
+        background-color: #333;
+        color: #4b98a9;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .learn-btn {
+        display: inline-block;
+        padding: 5%;
+        border: 2px solid #333;
+        border-radius: 3px;
+        color: #333;
+        font-size: 16px;
+        margin-left: 1%;
+        font-weight: bold;
+    }
+    .hero img {
+        opacity: 1;
+        width: 400%;
+        margin-left: -40%;
+        margin-top: 1%;
+    }
 }
-footer img {
-    width: 40%;
-    margin-top: 2%;
-    margin-left: 0;
-}
-#mySidenav
-{
-    width: 165px;
-}
-.navicon {
+
+@media screen and (max-width:450px) {
+    .hero img {
+        opacity: 1;
+        width: 50px;
+        margin-left: -40%;
+        margin-top: -3%;
+    }
+    .use-btn {
+    display: inline-block;
+    margin: 0px 10px 10px 5%;
+    padding: 13px 7%;
+    border-radius: 3px;
+    font-weight: bolder;
+    background-color: #33b1ec;
+    color: #ffffff;
+    font-size: 16px;
+    }
+    .learn-btn {
+            display: inline-block;
+    padding: 10px 1%;
+    border: 2px solid #333;
+    border-radius: 3px;
+    color: #333;
+    font-size: 14px;
+    margin-left: 1%;
+    font-weight: bold;
+    }
+    #downkey img {
     position: absolute;
-    height: 26px;
-    float: right;
-    margin-left: 46%;
-    margin-top: 5%;
-}
-.hero img
-{
-    width: 600%;
+    margin-left: 90%;
+    /* float: right; */
+    width: 9%;
 }
 }

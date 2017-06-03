@@ -70,4 +70,13 @@ $('a[href*=#]:not([href=#])').click(function() {
 });
 
 
+$("#open_modal").click(function(){
+                console.log('hi');
+                $('#myModal').modal('show');
+            });
+
+// $("#dk").click(function () {
+//     console.log("hello");
+//     $('body').css("transform", "translatey(1000px)");
+// });
 });
