@@ -8,7 +8,16 @@
     <link rel="stylesheet" href="../css/login.css">
     <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-    <title>Admin</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/flickity.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/fonts.css" rel='stylesheet' type='text/css'>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/queries.css" rel="stylesheet">
+    <link href="css/side_nav.css" rel='stylesheet' type='text/css'>
+    <title>Merchant Login</title>
 </head>
 
 <body>
@@ -37,8 +46,44 @@
                         </div>
                     </div>
                     <div id="pass" class="form-group">
-                        <a href="">Forgot Password?</a>
+                        <a href="" data-target="#pwdModal" data-toggle="modal">Forgot Password?</a>
                     </div>
+                    <!-- modal for forgot password -->
+                    <div id="pwdModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h1 class="text-center">Forgot Password</h1>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="col-md-12">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body">
+                                                <div class="text-center">
+                                                    <p>Enter the mobile number on which you want to recieve an OTP</p>
+                                                    <div class="panel-body">
+                                                        <fieldset>
+                                                            <div class="form-group">
+                                                                <input class="form-control input-lg" placeholder="Mobile Number" name="email" type="email">
+                                                            </div>
+                                                            <input class="btn btn-lg btn-primary btn-block" value="Send OTP" type="submit">
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="col-md-12">
+                                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal end -->
                     <br>
                     <br>
                     <div class="checkbox">
@@ -50,9 +95,152 @@
                         <a href="" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Login</a>
                     </div>
                     <br>
-                    <div  class="form-group ">
-                        <p style="float:left;">Haven't registered yet</p>
-                        <button id="reg" type="button">Register</button>
+                    <div class="form-group ">
+                        <p style="float:left;">Haven't registered yet?</p>
+                        <button id="reg" type="button" class="use-btn animated fadeInUp" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Register</button>
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 style="font-weight:bolder;" class="modal-title">REGISTER</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form name="reg_form" action "#" onsubmit="return validate();">
+                                            <div class="form-group">
+                                                <label for="inputName" class="control-label">Name<sup style="color:red;font-size:8px;">*</sup></label>
+                                                <input type="text" name="name1" class="form-control" id="inputName" style="text-transform: capitalize;" placeholder="" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="mob_no" class="control-label">Mobile Number<sup style="color:red;font-size:8px;">*</sup></label>
+                                                <div class="input-group">
+                                                    <!-- <span class="input-group-addon">@</span> -->
+                                                    <input type="text" name="mobile" pattern="^[0-9]{10}" maxlength="10" class="form-control" id="mob_no" placeholder="Enter 10 digit mobile number" required>
+                                                </div>
+                                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                <!-- <div class="help-block with-errors">Hey look, this one has feedback icons!</div> -->
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputEmail" class="control-label">Email</label>
+                                                <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="firm_name" class="control-label">Enterprise/Firm Name<sup style="color:red;font-size:8px;">*</sup></label>
+                                                <div class="form-group ">
+                                                    <input type="textarea" name="enterprise" maxlength="100" class="form-control" id="firm_name" placeholder="" style="text-transform: uppercase;" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="firm_name" class="control-label">Address Line 1<sup style="color:red;font-size:8px;">*</sup></label>
+                                                <div class="form-group ">
+                                                    <input type "text" name="add1" class="form-control" id="add1" maxlength="35" placeholder="" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="firm_name" class="control-label">Address Line 2<sup style="color:red;font-size:8px;">*</sup></label>
+                                                <div class="form-group ">
+                                                    <input type "text" name="add2" class="form-control" id="add2" maxlength="35" placeholder="" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="firm_name" class="control-label">Address Line 3</label>
+                                                <div class="form-group ">
+                                                    <input type "text" name="add3" class="form-control" id="add3" maxlength="35" placeholder="optional">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pincode" class="control-label">Pincode</label>
+                                                <div class="input-group">
+                                                    <!-- <span class="input-group-addon">@</span> -->
+                                                    <input type="text" name="pincode" pattern="^[0-9]{6}" maxlength="6" class="form-control" id="pincode" placeholder="123456" required>
+                                                </div>
+                                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                <!-- <div class="help-block with-errors">Hey look, this one has feedback icons!</div> -->
+                                            </div>
+                                            <h3 style="font-weight:bolder;">Business category<sup style="color:red;font-size:8px;">*</sup></h3>
+                                            <select>
+                                                <!-- <option value="Apparel">Select</option> -->
+                                                <option value="Apparel">Apparel</option>
+                                                <option value="Automobile Repair, Spare Parts & Accessory">Automobile Repair, Spare Parts & Accessory
+                                                </option>
+                                                <option value="Bakery/Cake Shop">Bakery/Cake Shop
+                                                </option>
+                                                <option value="Beauty Parlour/Spa/Saloon">Beauty Parlour/Spa/Saloon
+                                                </option>
+                                                <option value="Bicycles/Sports Gear & Accessories">Bicycles/Sports Gear & Accessories
+                                                </option>
+                                                <option value="Cable Operator/ Broadband">Cable Operator/ Broadband
+                                                </option>
+                                                <option value="Cosmetics">Cosmetics </option>
+                                                <option value="Dentist">Dentist </option>
+                                                <option value="Education ">Education </option>
+                                                <option value="Electrical & Hardware">Electrical & Hardware
+                                                </option>
+                                                <option value="Florist/ Flower Vendors">Florist/ Flower Vendors
+                                                </option>
+                                                <option value="Footwear">Footwear </option>
+                                                <option value="Gym/ Activity Classes">Gym/ Activity Classes
+                                                </option>
+                                                <option value="Handyman Services">Handyman Services
+                                                </option>
+                                                <option value="Home Decor/ Furnishing/ Furniture">Home Decor/ Furnishing/ Furniture
+                                                </option>
+                                                <option value="Ice Cream Parlour/ Restaurants">Ice Cream Parlour/ Restaurants
+                                                </option>
+                                                <option value="Jewellery">Jewellery </option>
+                                                <option value="Laundry">Laundry </option>
+                                                <option value="Medical Stores">Medical Stores
+                                                </option>
+                                                <option value="Milk Vendor">Milk Vendor
+                                                </option>
+                                                <option value="Mobile Devices/ Accessories">Mobile Devices/ Accessories
+                                                </option>
+                                                <option value="Newspaper/ Magazine vendors">Newspaper/ Magazine vendors
+                                                </option>
+                                                <option value="Opticians">Opticians </option>
+                                                <option value="Pathology labs">Pathology labs
+                                                </option>
+                                                <option value="Pharmacy">Pharmacy</option>
+                                                <option value="Poultry/Fish/Frozen Food">Poultry/Fish/Frozen Food
+                                                </option>
+                                                <option value="SuperMarket/ General Stores">SuperMarket/ General Stores
+                                                </option>
+                                                <option value="Sweet & Snacks">Sweet & Snacks
+                                                </option>
+                                                <option value="Vegetable/ Fruit Vendors">Vegetable/ Fruit Vendors
+                                                </option>
+                                                <option value="Wine Shops">Wine Shops
+                                                </option>
+                                                <option value="Other services">Other Services
+                                                </option>
+                                            </select>
+                                            <div>
+                                            </div>
+                                            <h3 style="font-weight:bolder;">Business Type<sup style="color:red;font-size:8px;">*</sup></h3>
+                                            <select>
+                                                <option value="Sole_Proprietorship">Sole Proprietorship</option>
+                                                <option value="Partnership">Partnership/Limited Liability Partnership</option>
+                                                <option value="private">Private/Public Limited Company</option>
+                                                <option value="private">Trust</option>
+                                                <option value="private">Hindu Undivided Family (HUF)</option>
+                                            </select>
+                                            <div>
+                                            </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary" onclick="success()">Submit</button>
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                    </div>
+                                    </form>
+                                </div>
+                                <!-- <div class="modal-footer">
+                                </div> -->
+                            </div>
+                            <!-- </div> -->
+                        </div>
                     </div>
                 </form>
             </div>
@@ -60,6 +248,17 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/finmo.js"></script>
+    <script src="js/min/toucheffects-min.js"></script>
+    <script src="js/flickity.pkgd.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/retina.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/side_nav.js"></script>
+    <script src="../js/vaildate_form.js"></script>
 </body>
 
 </html>

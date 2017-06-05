@@ -71,12 +71,27 @@ $('a[href*=#]:not([href=#])').click(function() {
 
 
 $("#open_modal").click(function(){
-                console.log('hi');
+                // console.log('hi');
                 $('#myModal').modal('show');
             });
 
-// $("#dk").click(function () {
-//     console.log("hello");
-//     $('body').css("transform", "translatey(1000px)");
-// });
+
+
+ $(function () {
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            $('.back-top').fadeIn();
+        } else {
+            $('.back-top').fadeOut();
+        }
+    }); 
+    
+    // scroll body to 0px on click
+    $('.back-top').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 1600);
+        return false;
+    });
+});
 });

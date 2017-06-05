@@ -4,19 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FINMO:UPI mobile payment</title>
+    <title>UPI, BHIM, Bharat QR, Aadhaar Pay</title>
     <meta name="description" content="BHIM/UPI enables website" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/jquery.fancybox.css" rel="stylesheet">
     <link href="css/flickity.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
-<<<<<<< HEAD
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/fonts.css" rel='stylesheet' type='text/css'>
-=======
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
->>>>>>> 85e054fd4a4f063d7c080a764bb2afb2db259147
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/queries.css" rel="stylesheet">
     <link href="css/side_nav.css" rel='stylesheet' type='text/css'>
@@ -75,47 +70,59 @@
                                         <h4 style="font-weight:bolder;" class="modal-title">REGISTER</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <form data-toggle="validator" role="form">
+                                        <form name="reg_form" id="reg_form " action "#" >
                                             <div class="form-group">
-                                                <label for="inputName" class="control-label">Name</label>
-                                                <input type="text" class="form-control" id="inputName" placeholder="" required>
+                                                <label for="inputName" class="control-label">Name<sup style="color:red;font-size:8px;">*</sup></label>
+                                                <input type="text" name="name1" class="form-control" id="inputName" style="text-transform: capitalize;" placeholder="" required>
                                             </div>
                                             <div class="form-group">
-                                                <label for="mob_no" class="control-label">Mobile Number</label>
+                                                <label for="mob_no" class="control-label">Mobile Number<sup style="color:red;font-size:8px;">*</sup></label>
                                                 <div class="input-group">
                                                     <!-- <span class="input-group-addon">@</span> -->
-                                                    <input type="text" pattern="^[0-9]{10}" maxlength="10" class="form-control" id="mob_no" placeholder="9999888877" required>
+                                                    <input type="text" name="mobile" pattern="^[0-9]{10}" maxlength="10" class="form-control" id="mob_no" placeholder="Enter 10 digit mobile number" required>
                                                 </div>
                                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                                 <!-- <div class="help-block with-errors">Hey look, this one has feedback icons!</div> -->
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputEmail" class="control-label">Email</label>
-                                                <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
+                                                <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="firm_name" class="control-label">Enterprise/Firm Name</label>
+                                                <label for="firm_name" class="control-label">Enterprise/Firm Name<sup style="color:red;font-size:8px;">*</sup></label>
                                                 <div class="form-group ">
-                                                    <input type="textarea" class="form-control" id="firm_name" placeholder="" required>
+                                                    <input type="textarea" name="enterprise" maxlength="100" class="form-control" id="firm_name" placeholder="" style="text-transform: uppercase;" required>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="firm_name" class="control-label">Address</label>
+                                                <label for="firm_name" class="control-label">Address Line 1<sup style="color:red;font-size:8px;">*</sup></label>
                                                 <div class="form-group ">
-                                                    <textarea class="form-control" id="firm_name" placeholder="" required></textarea>
+                                                    <input type "text" name="add1" class="form-control" id="add1" maxlength="35" placeholder="" required>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="mob_no" class="control-label">Pincode</label>
+                                                <label for="firm_name" class="control-label">Address Line 2<sup style="color:red;font-size:8px;">*</sup></label>
+                                                <div class="form-group ">
+                                                    <input type "text" name="add2" class="form-control" id="add2" maxlength="35" placeholder="" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="firm_name" class="control-label">Address Line 3</label>
+                                                <div class="form-group ">
+                                                    <input type "text" name="add3" class="form-control" id="add3" maxlength="35" placeholder="optional">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pincode" class="control-label">Pincode</label>
                                                 <div class="input-group">
                                                     <!-- <span class="input-group-addon">@</span> -->
-                                                    <input type="text" pattern="^[0-9]{6}" maxlength="6" class="form-control" id="mob_no" placeholder="123456" required>
+                                                    <input type="text" name="pincode" pattern="^[0-9]{6}" maxlength="6" class="form-control" id="pincode" placeholder="123456" required>
                                                 </div>
                                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                                 <!-- <div class="help-block with-errors">Hey look, this one has feedback icons!</div> -->
                                             </div>
-                                            <h3 style="font-weight:bolder;">Business category</h3>
+                                            <h3 style="font-weight:bolder;">Business category<sup style="color:red;font-size:8px;">*</sup></h3>
                                             <select>
                                                 <!-- <option value="Apparel">Select</option> -->
                                                 <option value="Apparel">Apparel</option>
@@ -174,7 +181,7 @@
                                             </select>
                                             <div>
                                             </div>
-                                            <h3 style="font-weight:bolder;">Business Type</h3>
+                                            <h3 style="font-weight:bolder;">Business Type<sup style="color:red;font-size:8px;">*</sup></h3>
                                             <select>
                                                 <option value="Sole_Proprietorship">Sole Proprietorship</option>
                                                 <option value="Partnership">Partnership/Limited Liability Partnership</option>
@@ -186,7 +193,9 @@
                                             </div>
                                             <br>
                                             <div class="form-group">
-                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                                <!-- <button type="submit" class="btn btn-primary" id="sub" onclick="success();">Submit</button> -->
+                                                <button type="submit" class="btn btn-primary" onclick="success()">Submit</button>
+
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                             </div>
                                     </div>
@@ -204,13 +213,34 @@
             <!--    <div id="downkey">
                 <a  href="#screenshots"><img src="pics/down.png"></a>
             </div> -->
+            <div class="back-top">
+                <a href=""><img src="pics/up.png" ></a>
+            </div>
         </section>
     </header>
-    <!--  -->
+
+
+    <div id="message1" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Success</h4>
+                </div>
+                <div class="modal-body">
+                    <p>THANK YOU FOR GIVING US THE DETAILS. OUR TEAM WILL GET IN TOUCH WITH YOU SHORTLY.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="screenshots" id="screenshots">
     <div id="why">
         <h2>WHY CHOOSE DigiBharat<sup>TM</sup>?</h2>
     </div>
-    <section class="screenshots" id="screenshots">
         <div class="container-fluid">
             <div class="row">
                 <ul class="grid-3">
@@ -323,12 +353,12 @@
                 <a  href="#screen_shots"><img src="pics/down.png"></a>
             </div> -->
     </section>
+    <section class="screenshots" id="screen_shots">
     <div id="why">
         <h2>
             BUSINESSES
         </h2>
     </div>
-    <section class="screenshots" id="screen_shots">
         <div class="container-fluid">
             <div class="row">
                 <ul class="grid-3">
@@ -423,7 +453,7 @@
         <div class="col-md-12" style="background-color:#f5f5f5;">
             <h1 class="animated fadeInDown">Get your Business BHIM/UPI enabled with DigiBharat<sup>TM</sup></h1>
             <!-- <a class="use-btn animated fadeInUp" id="open_modal">Register</a> -->
-            <button type="button" id="open_modal">Register</button>
+            <button class="use-btn animated fadeInUp" type="button" id="open_modal">Register</button>
         </div>
         <!-- <div id="downkey">
                 <a  href="#screenshots"><img src="pics/down.png"></a>
@@ -445,22 +475,22 @@
                     <ul class="footer-nav">
                         <li>Contact Us
                             <br>
-                            <a href="">chirag@finmo.in</a>
+                            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=chirag@finmo.in&tf=1" target="_blank">chirag@finmo.in</a>
                             <br>
-                            <a href="">support@finmo.in</a>
+                            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=support@finmo.in&tf=1" target="_blank">support@finmo.in</a>
                             <br> +91-9811084903
                         </li>
                         <li>Career
                             <br>
-                            <a href="">chirag@finmo.in</a>
+                            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=chirag@finmo.in&tf=1" target="_blank">chirag@finmo.in</a>
                             <br>
                         </li>
                         <li style="width:21%;">Social
                             <br>
-                            <a href="https://www.facebook.com/" target="_blank"><img src="pics/facebook.png" alt="fb_logo"></a>
-                            <a href="https://twitter.com/login" target="_blank"><img src="pics/twitter.png" alt="twitter_logo"></a>
-                            <a href="https://www.linkedin.com" target="_blank"><img src="pics/in.png" alt="linkedin_logo"></a>
-                            <a href="https://www.instagram.com/?hl=en" target="_blank"><img src="pics/insta.png" alt="instagram_logo"></a>
+                            <a href="https://www.facebook.com/finmo.in/?fref=ts&ref=br_tf" target="_blank"><img src="pics/facebook.png" alt="fb_logo"></a>
+                            <a href="https://twitter.com/FinmoIndia?lang=en" target="_blank"><img src="pics/twitter.png" alt="twitter_logo"></a>
+                            <a href="https://www.linkedin.com/company/evokio-india-private-limited" target="_blank"><img src="pics/in.png" alt="linkedin_logo"></a>
+                            <a href="https://www.instagram.com/finmoindia/" target="_blank"><img src="pics/insta.png" alt="instagram_logo"></a>
                         </li>
                         <li>Office
                             <br> Evokio India Private Ltd
@@ -492,7 +522,7 @@
     </div> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
-    <script src="js/Finmo.js"></script>
+    <script src="js/finmo.js"></script>
     <script src="js/min/toucheffects-min.js"></script>
     <script src="js/flickity.pkgd.min.js"></script>
     <script src="js/jquery.fancybox.pack.js"></script>
@@ -500,6 +530,10 @@
     <script src="js/waypoints.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/side_nav.js"></script>
+    <script src="js/vaildate_form.js"></script>
+    
+    <script type="text/javascript">
+    </script>
 </body>
 
 </html>

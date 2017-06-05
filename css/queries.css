@@ -81,7 +81,10 @@
     #why h2 {
         margin-top: 4%;
         margin-bottom: -2%;
-        padding-left: 35%;
+        /*padding-left: 30%;*/
+        text-align: center;
+        font-size: 26px;
+        font-weight: bolder;
         font-family: sans-serif;
     }
     #ser h2 {
@@ -214,29 +217,39 @@
         margin-top: -3%;
     }
     .use-btn {
-    display: inline-block;
-    margin: 0px 10px 10px 5%;
-    padding: 13px 7%;
-    border-radius: 3px;
-    font-weight: bolder;
-    background-color: #33b1ec;
-    color: #ffffff;
-    font-size: 16px;
+        display: inline-block;
+        margin: 0px 10px 10px 5%;
+        padding: 13px 7%;
+        border-radius: 3px;
+        font-weight: bolder;
+        background-color: #33b1ec;
+        color: #ffffff;
+        font-size: 16px;
     }
     .learn-btn {
-            display: inline-block;
-    padding: 10px 1%;
-    border: 2px solid #333;
-    border-radius: 3px;
-    color: #333;
-    font-size: 14px;
-    margin-left: 1%;
-    font-weight: bold;
+        display: inline-block;
+        padding: 10px 1%;
+        border: 2px solid #333;
+        border-radius: 3px;
+        color: #333;
+        font-size: 14px;
+        margin-left: 1%;
+        font-weight: bold;
     }
     #downkey img {
-    position: absolute;
-    margin-left: 90%;
-    /* float: right; */
-    width: 9%;
-}
+        position: absolute;
+        margin-left: 90%;
+        /* float: right; */
+        width: 9%;
+    }
+    .back-top {
+        width: 3%;
+        /* height: 25%; */
+        /* background: #ff0000; */
+        position: fixed;
+        bottom: 2%;
+        right: 11%;
+        display: none;
+        opacity: 0.8;
+    }
 }
